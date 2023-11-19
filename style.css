@@ -1,0 +1,88 @@
+h1 {
+    text-align: center;
+    font-family: ubuntu;
+    color: rgb(222, 162, 217);
+  }
+  
+  #slider {
+    background-color: rgb(248, 247, 248);
+    border: 10px solid rgb(95, 61, 91);
+    border-radius: 100px;
+    border-color: rgb(130, 41, 117);
+    margin: 20px auto;
+    position: relative;
+    width: 400px;
+    height: 300px;
+    overflow: hidden;
+  }
+  
+  @keyframes slideAnimation {
+    0% {
+      opacity: 0;
+      transform: scale(0.8);
+    }
+    100% {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+  
+  #slider img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: none;
+    object-fit: cover;
+    transition: opacity 0.5s, transform 0.5s;
+  }
+  
+  #slider img.active {
+    display: block;
+    opacity: 1;
+    transform: scale(1);
+    animation: slideAnimation 0.5s ease;
+  }
+  
+  #sliders-controls {
+    text-align: center;
+    font-family: ubuntu;
+    border-radius: 100px
+  }
+  
+  .slider-control {
+    cursor: pointer;
+    padding: 5px;
+    margin-right: 5px;
+    user-select: none;
+    border-radius: 100px;
+  }
+  
+  .slider-control:hover {
+    color: #333333;
+    text-decoration: underline;
+  }
+  
+  .slider-control.active {
+    color: rgb(128, 128, 128);
+    font-weight: bold;
+  }
+  
+  #sliders-controls span {
+    margin: 0;
+    border-style: double;
+    background-color: rgb(136, 55, 124);
+    border: 1px solid rgb(232, 220, 220);
+    border-radius: 250px;
+    color: rgb(193, 183, 183);
+    position: relative;
+    padding: 5px;
+    text-align: center;
+    align-items: center;
+    font-size: 30px;
+    border: 5px solid rgb(150, 114, 138);
+    transition: all 0.5s ease;
+  }
+  
+  #sliders-controls span.active {
+    color: rgb(225, 170, 219)
+  }
